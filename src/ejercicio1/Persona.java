@@ -2,7 +2,7 @@ package ejercicio1;
 
 import java.time.LocalDate;
 
-public class Persona {
+public class Persona  {
  
 	//Atributos 
 	
@@ -83,9 +83,21 @@ public class Persona {
 			this.telefono = telefono;
 			this.email = email;
 		}
+		
+	public static Boolean VerificarDNI (String DNI)
+	{		
+		if ( DNI.length() != 8)
+		{
+			ExVerificarDNI ex1 = new ExVerificarDNI();
+			throw ex1;
+		}
+		
+		return true;
+	}
 	 
 	@Override
 	public String toString() {
 		return "Persona [DNI=" + dni + ", Nombre=" + nombre + ", Apellido=" + apellido + ", Fecha de nacimiento=" + fechaNacimiento + ", Genero=" + genero + ", Dirección=" + direccion + ", Teléfono=" + telefono + ", Email= " + email + "]";
 	}
 }
+
