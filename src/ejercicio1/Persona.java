@@ -2,7 +2,7 @@ package ejercicio1;
 
 import java.time.LocalDate;
 
-public class Persona  {
+public class Persona implements Comparable<Persona>{
  
 	//Atributos 
 	
@@ -98,6 +98,12 @@ public class Persona  {
 	@Override
 	public String toString() {
 		return "Persona [DNI=" + dni + ", Nombre=" + nombre + ", Apellido=" + apellido + ", Fecha de nacimiento=" + fechaNacimiento + ", Genero=" + genero + ", Dirección=" + direccion + ", Teléfono=" + telefono + ", Email= " + email + "]";
+	}
+	
+	@Override
+	public int compareTo(Persona o) {
+		// TODO Auto-generated method stub
+		return 0;
 	}
 }
 
