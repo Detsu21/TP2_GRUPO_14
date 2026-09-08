@@ -22,6 +22,12 @@ public class MainEjercicio1_c {
         listaEmpleados.add(emp3);
         listaEmpleados.add(emp4);
         listaEmpleados.add(emp5);
-
+        
+        Iterator<Empleado> itE= listaEmpleados.iterator();
+        while(itE.hasNext()) {
+        	
+        	Empleado e= itE.next();
+        	System.out.println(e.toString());
+        }
     }
 }

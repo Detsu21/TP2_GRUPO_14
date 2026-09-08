@@ -91,6 +91,10 @@ public class Persona implements Comparable<Persona>{
 		{
 			ExVerificarDNI ex1 = new ExVerificarDNI();
 			throw ex1;
+		}try {
+			Integer.parseInt(DNI);
+		} catch (NumberFormatException e) {
+		    throw new ExVerificarDNI();
 		}
 		
 		return true;
@@ -104,7 +108,13 @@ public class Persona implements Comparable<Persona>{
 	@Override
 	public int compareTo(Persona o) {
 		// TODO Auto-generated method stub
-		return 0;
+		
+		if(o.dni==this.dni)
+			{return 0;}
+		if(Integer.parseInt(o.dni) < Integer.parseInt(this.dni))
+			{return -1;}
+		
+		return 1;
 	}
 	@Override
 	public int hashCode() {
