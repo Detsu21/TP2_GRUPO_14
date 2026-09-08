@@ -1,11 +1,11 @@
 package ejercicio2;
 
-public class Oficina extends Edificio implements IInstalacion{
+public class EdOficina extends Edificio implements IInstalacion{
 
 	private String nombre;
 	private int n_oficinas;
 	
-	public Oficina(String nombre, double superficie, int n_oficinas){
+	public EdOficina(String nombre, double superficie, int n_oficinas){
 		
 		super(superficie);
 		
