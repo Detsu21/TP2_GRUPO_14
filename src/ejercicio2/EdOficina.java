@@ -9,7 +9,7 @@ public class EdOficina extends Edificio implements IInstalacion{
 		
 		super(superficie);
 		
-		this.getN_Oficinas(n_oficinas);
+		this.setN_oficinas(n_oficinas);
 		this.setNombre(nombre);
 	}
 	
@@ -18,11 +18,14 @@ public class EdOficina extends Edificio implements IInstalacion{
 		return 2;
 	}
 
-	public int getN_Oficinas(int n_oficinas)
-	{
+	public int getN_oficinas() {
 		return n_oficinas;
 	}
-	
+
+	public void setN_oficinas(int n_oficinas) {
+		this.n_oficinas = n_oficinas;
+	}
+
 	public String getNombre() {
 		return nombre;
 	}
@@ -33,6 +36,6 @@ public class EdOficina extends Edificio implements IInstalacion{
 
 	@Override
 	public String toString() {
-		return "Nombre= " + nombre + ", TipoDeInstalacion= " + getTipoDeInstalacion() + ", Superficie= " + this.getSuperficieEdificio() + ", N. Oficinas= " + this.getN_Oficinas(n_oficinas);
+		return "Nombre= " + nombre + ", TipoDeInstalacion= " + getTipoDeInstalacion() + ", Superficie= " + this.getSuperficieEdificio() + ", N. Oficinas= " + this.getN_oficinas();
 	}
 }
