@@ -38,4 +38,18 @@ public class EdOficina extends Edificio implements IInstalacion{
 	public String toString() {
 		return "Nombre= " + nombre + ", TipoDeInstalacion= " + getTipoDeInstalacion() + ", Superficie= " + this.getSuperficieEdificio() + ", N. Oficinas= " + this.getN_oficinas();
 	}
+	
+	@Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null || getClass() != obj.getClass()) {
+            return false;
+        }
+        EdOficina otroEdificio = (EdOficina) obj;
+
+        return Double.compare(otroEdificio.getSuperficieEdificio(), this.getSuperficieEdificio()) == 0 &&
+               this.n_oficinas == otroEdificio.getN_oficinas();
+    }
 }
